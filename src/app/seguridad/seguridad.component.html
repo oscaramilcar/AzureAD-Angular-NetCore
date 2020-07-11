@@ -1,0 +1,19 @@
+<div class="container">
+  <h2 class="text-center display-4">{{titulo}}</h2>
+  <hr>
+  <div class="row">
+    <div class="col-12 text-center">
+      <button class="btn btn-outline-primary" (click)="mostarMensaje()">Iniciar sesion</button>
+    </div>
+  </div>
+  <div class="row" *ngIf="mostrarRespuesta">
+    <div class="col-12">
+      <div class="alert alert-success" *ngIf="respuestaExitosa">
+        {{respuestaTxt}}
+      </div>
+      <div class="alert alert-danger" *ngIf="!respuestaExitosa">
+        {{respuestaTxt}}
+      </div>
+    </div>
+  </div>
+</div>
